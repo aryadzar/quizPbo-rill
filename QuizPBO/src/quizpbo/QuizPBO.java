@@ -12,35 +12,35 @@ import java.util.List;
  * @author aryad
  */
 
-//class Point{
-//    private double x;
-//    private double y;
-//
-//    public Point(double x, double y) {
-//        this.x = x;
-//        this.y = y;
-//    }
-//
-//    public double getX() {
-//        return x;
-//    }
-//
-//    public void setX(double x) {
-//        this.x = x;
-//    }
-//
-//    public double getY() {
-//        return y;
-//    }
-//
-//    public void setY(double y) {
-//        this.y = y;
-//    }
-//    public double distance(Point other){
-//        double result = Math.sqrt(Math.pow((other.getX() - this.x), 2) + Math.pow((other.getY() - this.y), 2) );
-//        return result;
-//    }
-//}
+class Point{
+   private double x;
+   private double y;
+
+   public Point(double x, double y) {
+       this.x = x;
+       this.y = y;
+   }
+
+   public double getX() {
+       return x;
+   }
+
+   public void setX(double x) {
+       this.x = x;
+   }
+
+   public double getY() {
+       return y;
+   }
+
+   public void setY(double y) {
+       this.y = y;
+   }
+   public double distance(Point other){
+       double result = Math.sqrt(Math.pow((other.getX() - this.x), 2) + Math.pow((other.getY() - this.y), 2) );
+       return result;
+   }
+}
 
 abstract class Shape{
     public abstract double calculateArea();
@@ -192,77 +192,77 @@ class Buku{
 }
 
 //
-//class Rectangle extends Shape{
-//    private double length;
-//    private double width;
-//
-//    public Rectangle(double length, double width) {
-//        this.length = length;
-//        this.width = width;
-//    }
-//
-//    public double getLength() {
-//        return length;
-//    }
-//
-//    public void setLength(double length) {
-//        this.length = length;
-//    }
-//
-//    public double getWidth() {
-//        return width;
-//    }
-//
-//    public void setWidth(double width) {
-//        this.width = width;
-//    }
-//    
-//    @Override
-//    public double calculateArea(){
-//        return this.getLength() * this.getWidth();
-//    }
-//    
-//    @Override
-//    public double calculatePerimeter(){
-//        return (2 * this.getLength()) + (2 * this.getWidth());
-//    }
-//}
+class Rectangle extends Shape{
+   private double length;
+   private double width;
 
-//class Classroom{
-//    protected static String [] roomList = {"GIK L1 C", "GIK L2", "MIPA T L1 A", "MIPA T L1 B"};
-//
-//    public static String[] getRoomList() {
-//        return roomList;
-//    }
-//    
-//    public static boolean isValidRoom(String room){
-//        for(String i : roomList){
-//            if(i.equals(room)){
-//                return true;
-//            }
-//        }
-//        
-//        return false;
-//    }
-//    
-//}
+   public Rectangle(double length, double width) {
+       this.length = length;
+       this.width = width;
+   }
+
+   public double getLength() {
+       return length;
+   }
+
+   public void setLength(double length) {
+       this.length = length;
+   }
+
+   public double getWidth() {
+       return width;
+   }
+
+   public void setWidth(double width) {
+       this.width = width;
+   }
+   
+   @Override
+   public double calculateArea(){
+       return this.getLength() * this.getWidth();
+   }
+   
+   @Override
+   public double calculatePerimeter(){
+       return (2 * this.getLength()) + (2 * this.getWidth());
+   }
+}
+
+class Classroom{
+   protected static String [] roomList = {"GIK L1 C", "GIK L2", "MIPA T L1 A", "MIPA T L1 B"};
+
+   public static String[] getRoomList() {
+       return roomList;
+   }
+   
+   public static boolean isValidRoom(String room){
+       for(String i : roomList){
+           if(i.equals(room)){
+               return true;
+           }
+       }
+       
+       return false;
+   }
+   
+}
 public class QuizPBO {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//	
-//        Point point1 = new Point(10, 30);
-//        Point point2 = new Point(76, 85);
-//
-//        // Menghitung jarak antara dua titik
-//        double distance = point1.distance(point2);
-//        System.out.println("Distance between points: " + distance);
-//        Rectangle rectangle = new Rectangle(4.0, 5.0);
-//        System.out.println("Rectangle Area: " + rectangle.calculateArea());
-//        System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
-//         System.out.println(Classroom.isValidRoom("LOP"));
+	
+       Point point1 = new Point(10, 30);
+       Point point2 = new Point(76, 85);
+
+       // Menghitung jarak antara dua titik
+       double distance = point1.distance(point2);
+       System.out.println("Distance between points: " + distance);
+       Rectangle rectangle = new Rectangle(4.0, 5.0);
+       System.out.println("Rectangle Area: " + rectangle.calculateArea());
+       System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
+        System.out.println(Classroom.isValidRoom("LOP"));
         Shape trapezoid1 = new Trapezoid(3.0, 7.0, 4.0);
         Shape trapezoid2 = new Trapezoid(5.0, 9.0, 6.0);
 
@@ -282,21 +282,21 @@ public class QuizPBO {
 
         System.out.println("Kite 2 Area: " + kite2.calculateArea());
         System.out.println("Kite 2 Perimeter: " + kite2.calculatePerimeter());
-//        Penulis penulis = new Penulis();
-//
-//        // Menambahkan buku baru
-//        Buku bukuBaru = new Buku("Judul Buku", 2022, "Penerbit Terbit", "ISBN123456");
-//        penulis.tambahBuku(bukuBaru);
-//
-//        // Menampilkan informasi buku setelah penambahan
-//        List<Buku> daftarBuku = penulis.getDaftarBuku();
-//        for (Buku buku : daftarBuku) {
-//            System.out.println("Judul: " + buku.getJudul());
-//            System.out.println("Tahun Terbit: " + buku.getTahunTerbit());
-//            System.out.println("Penerbit: " + buku.getPenerbit());
-//            System.out.println("ISBN: " + buku.getISBN());
-//            System.out.println("--------------");
-//        }
+       Penulis penulis = new Penulis();
+
+       // Menambahkan buku baru
+       Buku bukuBaru = new Buku("Judul Buku", 2022, "Penerbit Terbit", "ISBN123456");
+       penulis.tambahBuku(bukuBaru);
+
+       // Menampilkan informasi buku setelah penambahan
+       List<Buku> daftarBuku = penulis.getDaftarBuku();
+       for (Buku buku : daftarBuku) {
+           System.out.println("Judul: " + buku.getJudul());
+           System.out.println("Tahun Terbit: " + buku.getTahunTerbit());
+           System.out.println("Penerbit: " + buku.getPenerbit());
+           System.out.println("ISBN: " + buku.getISBN());
+           System.out.println("--------------");
+       }
     }
     
 }
